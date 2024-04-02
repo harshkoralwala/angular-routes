@@ -1,0 +1,18 @@
+<div class="center">
+  <h2>{{displayMessage}}</h2>
+  <br />
+  <br />
+  <br />
+
+  <button (click)="changeAddress()"> Click me</button>
+
+  <div style="margin-top:100px;text-align: left;font-size: large;">
+    <ul>
+      <h4>Information</h4>
+      <li>Here on click of Button,the URL in address bar gets changed</li>
+      <li>As we have specified same path with different value, hence same component gets called again...</li>
+      <li>We have already subscribed the parameter change as Observable,hence it gets value once URL gets changed...</li>
+      <li>The benefit is,here Whole component is <b>not</b> reloaded i.e life cycle and constructor not called again(open console)</li>
+    </ul>
+  </div>
+</div>

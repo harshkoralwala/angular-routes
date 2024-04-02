@@ -1,0 +1,128 @@
+<h2> MENU</h2>
+
+<table border="1">
+  <thead>
+    <td>
+      <h3>Passing and fetching <u>Single</u> data as path (Static)</h3>
+    </td>
+    <td>
+      <h3>Passing and fetching <u>Multiple</u> data as path (Static)</h3>
+    </td>
+    <td>
+      <h3>Passing and fetching <u>Multiple</u> data as path (Reactive)</h3>
+    </td>
+    <td>
+      <h3>Passing and fetching data as QueryString <br />Landing on Fragment / specific content</h3>
+    </td>
+    <td>
+      <h3>Child Components and Routes</h3>
+    </td>
+    <td>
+      <h3>404 - No route found</h3>
+    </td>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="col-1">
+        <h4>Select Fruit</h4>
+        <ul>
+          <li><a [routerLink]="['/fruit', 'apple']">Apple</a></li>
+          <li><a [routerLink]="['/fruit', 'banana']">Banana</a></li>
+          <li><a [routerLink]="['/fruit', 'grape']">Grape</a></li>
+          <li><a [routerLink]="['/fruit', 'watermelon']">Watermelon</a></li>
+          <li><a [routerLink]="['/fruit', 'guava']">Guava</a></li>
+        </ul>
+      </td>
+      <td style="padding:20px;" id="col-2">
+        <h4>Select Product</h4>
+        <ul>
+          <li>Fruit
+            <ul>
+              <li><a [routerLink]="['/product', 'fruit','apple']">Apple</a></li>
+              <li><a [routerLink]="['/product', 'fruit' ,'banana']">Banana</a></li>
+            </ul>
+          </li>
+          <li>Car
+            <ul>
+              <li> <a [routerLink]="['/product','car' , 'swift']">Swift</a> </li>
+              <li> <a [routerLink]="['/product', 'car' ,'alto']">Alto</a> </li>
+            </ul>
+          </li>
+          <li>Mobile
+            <ul>
+              <li> <a [routerLink]="['/product','mobile' , 'charger']">Charger</a> </li>
+              <li> <a [routerLink]="['/product', 'mobile' ,'ear-buds']">Ear-buds</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td style="padding:20px;" id="col-3">
+        <h4>Select Product</h4>
+        <ul>
+          <li>Fruit
+            <ul>
+              <li><a [routerLink]="['/reactive', 'fruit','apple']">Apple</a></li>
+              <li><a [routerLink]="['/reactive', 'fruit' ,'banana']">Banana</a></li>
+            </ul>
+          </li>
+          <li>Car
+            <ul>
+              <li> <a [routerLink]="['/reactive','car' , 'swift']">Swift</a> </li>
+              <li> <a [routerLink]="['/reactive', 'car' ,'alto']">Alto</a> </li>
+            </ul>
+          </li>
+          <li>Mobile
+            <ul>
+              <li> <a [routerLink]="['/reactive','mobile' , 'charger']">Charger</a> </li>
+              <li> <a [routerLink]="['/reactive', 'mobile' ,'ear-buds']">Ear-buds</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td id="single-qs" id="col-4">
+        <h4>Select Fruit</h4>
+        <ul>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'mango'}">Mango</a></li>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'apple'}" fragment="apple-section">Apple</a></li>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'banana'}" fragment="banana-section">Banana</a></li>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'grape'}" fragment="grape-section">Grape</a></li>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'watermelon'}" fragment="watermelon-section">Watermelon</a></li>
+          <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'guava',isTasty:true}" fragment="gauva-section">Guava</a></li>
+          <li><span (click)="navigate()">Pineapple</span></li>
+        </ul>
+      </td>
+      <td id="col-5">
+        <h4>Select vehicle</h4>
+        <ul>
+          <li><a [routerLink]="['/vehicle', 'bike']">Bike</a></li>
+          <li><a [routerLink]="['/vehicle', 'scooty']">Scooty</a></li>
+          <li><a [routerLink]="['/vehicle', 'activa']">Activa</a></li>
+          <li><a [routerLink]="['/vehicle', 'car']">Car</a></li>
+          <li><a [routerLink]="['/vehicle','404']">Apple (404)</a></li>
+        </ul>
+
+      </td>
+      <td id="col-6">
+        <h4>Select Vehicle</h4>
+        <ul>
+          <li><a [routerLink]="['/test1']">Bike</a></li>
+          <li><a [routerLink]="['/registration']">Scooty</a></li>
+          <li><a [routerLink]="['/login']">Activa</a></li>
+          <li><a [routerLink]="['/logout']">Car</a></li>
+          <li><a [routerLink]="['/bike']">Apple</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li>Outsourcing the Route Configuration with Router Module</li>
+      </ul>
+    </td>
+  </tr>
+</table>

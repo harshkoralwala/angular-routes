@@ -1,4 +1,4 @@
-<h2> MENU</h2>
+<h2 class="center"> MENU</h2>
 
 <table border="1">
   <thead>
@@ -12,7 +12,7 @@
       <h3>Passing and fetching <u>Multiple</u> data as path (Reactive)</h3>
     </td>
     <td>
-      <h3>Passing and fetching data as QueryString <br />Landing on Fragment / specific content</h3>
+      <h3>Passing and fetching data as QueryString <br /><br /> + Landing on Fragment / specific content</h3>
     </td>
     <td>
       <h3>Child Components and Routes</h3>
@@ -26,6 +26,7 @@
       <td id="col-1">
         <h4>Select Fruit</h4>
         <ul>
+          <li><a [routerLink]="['/fruit']">None</a></li>
           <li><a [routerLink]="['/fruit', 'apple']">Apple</a></li>
           <li><a [routerLink]="['/fruit', 'banana']">Banana</a></li>
           <li><a [routerLink]="['/fruit', 'grape']">Grape</a></li>
@@ -116,13 +117,4 @@
     <tr>
     </tr>
   </tbody>
-</table>
-<table>
-  <tr>
-    <td>
-      <ul>
-        <li>Outsourcing the Route Configuration with Router Module</li>
-      </ul>
-    </td>
-  </tr>
 </table>

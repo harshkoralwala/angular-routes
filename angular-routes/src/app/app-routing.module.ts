@@ -11,22 +11,30 @@ import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
+  //Default Routes
+  { path: '', pathMatch: 'full', redirectTo: 'menu' },
   { path: 'menu', component: DashboardComponent },
-  { path: 'fruit', component: IndividualFruitComponent },
-  { path: 'fruit/:fruitName', component: IndividualFruitComponent },
-  { path: 'product/:category/:productName', component: IndividualProductComponent },
-  { path: 'reactive/:category/:productName', component: ReactiveProductComponent },
-  { path: 'fruit-qs', component: InidvidualFruitQueryStringComponent },
+
+  //COL 1
+  { path: 'fruit', component: IndividualFruitComponent }, //COL 1 || Passing and fetching Single data as path (Static)
+  { path: 'fruit/:fruitName', component: IndividualFruitComponent }, //COL 1 || Passing and fetching Single data as path (Static)
+  //COL 2
+  { path: 'product/:category/:productName', component: IndividualProductComponent }, //COL 2 || Passing and fetching Multiple data as path (Static)
+  //COL 3
+  { path: 'reactive/:category/:productName', component: ReactiveProductComponent }, //COL 3 || Passing and fetching Multiple data as path (Reactive)
+  //COL 4
+  { path: 'fruit-qs', component: InidvidualFruitQueryStringComponent }, //COL 4 || Passing and fetching data as QueryString + Landing on Fragment / specific content
+  //COL 5
   {
-    path: 'vehicle', component: AllVehiclesComponent,
+    path: 'vehicle', component: AllVehiclesComponent, pathMatch: 'prefix',  //COL 5 || Child Components and Routes
     children: [
       { path: '404', component: InvalidVehicleComponent },
       { path: ':vehicleId', component: IndividualVehicleComponent },
     ]
   },
-  { path: '**', redirectTo: '404' },//THIS MUST BE AT LAST
-  { path: '404', component: InvalidUrlComponent },//THIS MUST BE AT LAST
+  //COL 6
+  { path: '**', redirectTo: '404' },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
+  { path: '404', component: InvalidUrlComponent },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
 
 ];
 

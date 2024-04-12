@@ -13,6 +13,7 @@ export class IndividualFruitComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    console.log(this.route.snapshot);
     this.selectedFruit = this.route.snapshot.params['fruitName'] as string;
     if (this.selectedFruit) this.selectedFruit = "You have clicked on " + this.selectedFruit;
     else this.selectedFruit = "Opps! No fruit selected";

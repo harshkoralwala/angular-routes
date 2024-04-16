@@ -21,6 +21,7 @@ export class ReactiveProductComponent implements OnInit {
   ngOnInit() {
     console.log("ReactiveProductComponent ngOnInit", new Date().toLocaleString());
     this.activatedRoute.params.subscribe((params: Params) => {
+      console.log("ReactiveProductComponent params Change Detected", new Date().toLocaleString());
       console.log(params);
       this.selectedCategory = params['category'] as string;
       this.selectedItem = params['productName'] as string;

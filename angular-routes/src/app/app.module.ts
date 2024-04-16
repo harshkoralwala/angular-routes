@@ -15,7 +15,7 @@ import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     DashboardComponent,
     IndividualFruitComponent,
@@ -26,8 +26,8 @@ import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
     IndividualVehicleComponent,
     InvalidVehicleComponent,
     InvalidUrlComponent,
-      AllVehiclesComponent
-   ],
+    AllVehiclesComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule

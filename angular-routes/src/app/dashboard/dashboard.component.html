@@ -89,11 +89,11 @@
           <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'grape'}" fragment="grape-section">Grape</a></li>
           <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'watermelon'}" fragment="watermelon-section">Watermelon</a></li>
           <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'guava',isTasty:true}" fragment="gauva-section">Guava</a></li>
-          <li><span (click)="navigate()">Pineapple</span></li>
+          <li><span (click)="navigate()">Pineapple (Code)</span></li>
         </ul>
       </td>
       <td id="col-5">
-        <h4>Select vehicle</h4>
+        <h4>Select Vehicle</h4>
         <ul>
           <li><a [routerLink]="['/vehicle', 'bike']">Bike</a></li>
           <li><a [routerLink]="['/vehicle', 'scooty']">Scooty</a></li>
@@ -104,13 +104,12 @@
 
       </td>
       <td id="col-6">
-        <h4>Select Vehicle</h4>
+        <h4>Select Functionality</h4>
         <ul>
-          <li><a [routerLink]="['/test1']">Bike</a></li>
-          <li><a [routerLink]="['/registration']">Scooty</a></li>
-          <li><a [routerLink]="['/login']">Activa</a></li>
-          <li><a [routerLink]="['/logout']">Car</a></li>
-          <li><a [routerLink]="['/bike']">Apple</a></li>
+          <li><a [routerLink]="['/login']">LogIn</a></li>
+          <li><a [routerLink]="['/logout']">LogOut</a></li>
+          <li><a [routerLink]="['/registration']">Registration</a></li>
+          <li><a [routerLink]="['/forgot-password']">Forgot-password</a></li>
         </ul>
       </td>
     </tr>

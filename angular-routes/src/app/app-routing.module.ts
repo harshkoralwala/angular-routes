@@ -33,12 +33,13 @@ const routes: Routes = [
   },
   //COL 6
   {
-    path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) //COL 6 || Lazy Loading
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) //COL 6 || Lazy Loading
+    // loadChildren: './admin/admin.module#AdminModule' // Old way to define module as Lazy
   },
   //COL 7
   { path: '**', redirectTo: '404' },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
   { path: '404', component: InvalidUrlComponent },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
-
 ];
 
 @NgModule({

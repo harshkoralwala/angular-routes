@@ -14,7 +14,6 @@ const routes: Routes = [
   //Default Routes
   { path: '', pathMatch: 'full', redirectTo: 'menu' },
   { path: 'menu', component: DashboardComponent },
-
   //COL 1
   { path: 'fruit', component: IndividualFruitComponent }, //COL 1 || Passing and fetching Single data as path (Static)
   { path: 'fruit/:fruitName', component: IndividualFruitComponent }, //COL 1 || Passing and fetching Single data as path (Static)
@@ -33,6 +32,10 @@ const routes: Routes = [
     ]
   },
   //COL 6
+  {
+    path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) //COL 6 || Lazy Loading
+  },
+  //COL 7
   { path: '**', redirectTo: '404' },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
   { path: '404', component: InvalidUrlComponent },//COL 6 || 404 - No route found || THIS MUST BE AT LAST
 

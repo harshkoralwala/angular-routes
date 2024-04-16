@@ -1,4 +1,4 @@
-<h2 class="center"> MENU</h2>
+<h2 class="center">Angular Routing - Part 2 Dashboard</h2>
 
 <table border="1">
   <thead>
@@ -12,10 +12,13 @@
       <h3>Passing and fetching <u>Multiple</u> data as path (Reactive)</h3>
     </td>
     <td>
-      <h3>Passing and fetching data as QueryString <br /><br /> + Landing on Fragment / specific content</h3>
+      <h3>Passing and fetching data as QueryString <br /> + <br /> Landing on fragment / specific content</h3>
     </td>
     <td>
       <h3>Child Components and Routes</h3>
+    </td>
+    <td>
+      <h3>Lazy Loading</h3>
     </td>
     <td>
       <h3>404 - No route found</h3>
@@ -34,7 +37,7 @@
           <li><a [routerLink]="['/fruit', 'guava']">Guava</a></li>
         </ul>
       </td>
-      <td style="padding:20px;" id="col-2">
+      <td id="col-2">
         <h4>Select Product</h4>
         <ul>
           <li>Fruit
@@ -57,7 +60,7 @@
           </li>
         </ul>
       </td>
-      <td style="padding:20px;" id="col-3">
+      <td id="col-3">
         <h4>Select Product</h4>
         <ul>
           <li>Fruit
@@ -80,7 +83,7 @@
           </li>
         </ul>
       </td>
-      <td id="single-qs" id="col-4">
+      <td id="col-4">
         <h4>Select Fruit</h4>
         <ul>
           <li><a [routerLink]="['/fruit-qs']" [queryParams]="{name:'mango'}">Mango</a></li>
@@ -101,9 +104,16 @@
           <li><a [routerLink]="['/vehicle', 'car']">Car</a></li>
           <li><a [routerLink]="['/vehicle','404']">Apple (404)</a></li>
         </ul>
-
       </td>
       <td id="col-6">
+        <h4>Select Menu</h4>
+        <ul>
+          <li><a [routerLink]="['/admin']">Admin</a></li>
+          <li><a [routerLink]="['/admin/asset']">Asset Management</a></li>
+          <li><a [routerLink]="['/admin/user']">User-management</a></li>
+        </ul>
+      </td>
+      <td id="col-7">
         <h4>Select Functionality</h4>
         <ul>
           <li><a [routerLink]="['/login']">LogIn</a></li>

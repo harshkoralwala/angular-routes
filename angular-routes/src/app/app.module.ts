@@ -30,7 +30,7 @@ import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
